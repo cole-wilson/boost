@@ -94,6 +94,7 @@ for x in c:
 					brick.penup()
 			else:
 				lasty = y
+				print('movingy')
 			brick.sety(count)
 			brick.pendown()
 	brick.movex(2)
