@@ -198,7 +198,8 @@ while True:
 		else:
 			os.system('figlet "Line 2!!"')
 			brick.setx(0)
-			brick.sety(10)
+			brick.sety(15)
+			brick.y = 0
 			brick.x = 0
 			line2 = True
 
