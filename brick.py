@@ -3,14 +3,14 @@ from pylgbst import get_connection_gatt
 
 brick = 0
 
-def callback(clr):
+def callback(clr,distance):
     print("Color: %s" % (clr))
 
 
 conn = get_connection_gatt(hub_mac="00:16:53:A6:60:CC")
 hub = MoveHub(conn)
 
-hub.vision_sensor.subscribe(callback, mode=VisionSensor.COLOR_ONLY)
+hub.vision_sensor.subscribe(callback, mode=VisionSensor.COLOR_DISTANCE_FLOAT)
 
 
 p = 0
