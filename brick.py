@@ -7,10 +7,12 @@ def callback(clr,distance):
 	global color
 	color = clr
 	return True
+	print(color)
 
 
 conn = get_connection_gatt(hub_mac="00:16:53:A6:60:CC")
 hub = MoveHub(conn)
+hub.vision_sensor.unsubscribe(callback)
 
 hub.vision_sensor.subscribe(callback, mode=VisionSensor.COLOR_DISTANCE_FLOAT)
 
