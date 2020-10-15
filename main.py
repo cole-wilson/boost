@@ -165,3 +165,5 @@ while True:
 					brick.movex(-2)
 				brick.penup()
 	brick.movex(2)
+
+brick.penup()
