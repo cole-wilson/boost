@@ -140,6 +140,9 @@ print(ups)
 import brick
 print('Startings')
 xcount = -1
+
+line2 = False
+
 while True:
 	print('________________________')
 	print('| Battery Voltage: '+str(int(brick.hub.voltage.get_sensor_data(brick.Voltage.VOLTAGE_L)[0])*10)+"% |")
@@ -176,9 +179,17 @@ while True:
 				# brick.hub.motor_A.angled(5,0.2)
 	brick.movex(2)
 	if brick.x > 200:
-		brick.setx(0)
-		brick.sety(100)
+		if line2:
+			brick.sety(10)
+			brick.setx(0)
+			birck.x = 0
+			os.system('figlet "FEED ME PAPER!!!!!!!!!!!!!!!!!!!"')
+			input('[press enter to continue]')
+		else:
+			brick.setx(0)
+			brick.sety(100)
+			brick.x = 0
 
 brick.penup()
 
-system('figlet "All done!!"')
+os.system('figlet "All done!!"')
