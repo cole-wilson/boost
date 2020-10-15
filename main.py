@@ -82,7 +82,7 @@ for y in range(len(c)):
 		print('')
 	sidetosidelines[y] = xs
 
-# TRANSPOSE oput
+# TRANSPOSE output
 c2 = []
 for x in range(len(c[0])):
 	lineadd = ""
@@ -135,16 +135,17 @@ print(sides)
 print('---')
 print(ups)
 
-
+# PRINT
 
 import brick
 
-xcount = 1
+xcount = -1
 while True:
+	xcount = xcount + 1
 	brick.sety(-2)
 	brick.penup()
-	for x in sides[xcount]:
-		xcount = xcount + 1
+	print(f'Scanning for up and down lines at x position {xcount}')
+	for x in ups[xcount]:
 		print(f'Drawing from y{x[0]} to y{x[1]}.')
 		brick.sety(x[0])
 		brick.pendown()
