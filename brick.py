@@ -6,7 +6,6 @@ color = 0
 def callback(clr,distance):
 	global color
 	color = clr
-	return True
 	print(color)
 
 
