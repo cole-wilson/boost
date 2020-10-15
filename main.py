@@ -187,8 +187,9 @@ while True:
 			os.system('figlet "FEED ME PAPER!!!!!!!!!!!!!!!!!!!"')
 			input('[press enter to continue]')
 		else:
+			os.system('figlet "Line 2!!"')
 			brick.setx(0)
-			brick.sety(100)
+			brick.sety(60)
 			brick.x = 0
 			line2 = True
 
