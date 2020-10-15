@@ -178,7 +178,7 @@ while True:
 				brick.penup()
 				# brick.hub.motor_A.angled(5,0.2)
 	brick.movex(2)
-	if brick.x > 150:
+	if brick.x > 175:
 		if line2:
 			brick.sety(10)
 			brick.setx(0)
@@ -189,7 +189,7 @@ while True:
 		else:
 			os.system('figlet "Line 2!!"')
 			brick.setx(0)
-			brick.sety(60)
+			brick.sety(10)
 			brick.x = 0
 			line2 = True
 
