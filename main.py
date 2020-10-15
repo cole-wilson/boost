@@ -156,7 +156,7 @@ while True:
 	for y in range(10):
 		for x in sides[y]:
 			if x[0] == xcount:
-				print(f'Drawing from y{x[0]} to y{x[1]}.')
+				print(f'Drawing from x{x[0]} to x{x[1]}.')
 
 				brick.sety(y)
 				brick.pendown()

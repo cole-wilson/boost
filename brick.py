@@ -11,23 +11,23 @@ x = 0
 def penup():
 	global p
 	if p!=0:
-		hub.motor_A.angled(40,1)
+		hub.motor_A.angled(40,0.2)
 		p = 0
 def pendown():
 	global p
 	if p!=1:
-		hub.motor_A.angled(-40,1)
+		hub.motor_A.angled(-40,0.2)
 		p = 1
 def movex(amount):
 	global x
-	hub.motor_B.angled(5*amount,1)
+	hub.motor_B.angled(5*amount,0.2)
 	x = x + amount
 def setx(amount):
 	global x
 	movex(amount-x)
 def movey(amount):
 	global y
-	hub.motor_external.angled(10*amount,1)
+	hub.motor_external.angled(10*amount,0.2)
 	y = y + amount
 def sety(amount):
 	global y
