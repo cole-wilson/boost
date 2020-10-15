@@ -208,4 +208,4 @@ try:
 	os.system('figlet "All done!!"')
 except:
 	brick.penup()
-	os.system('figlet "ABORT!!!!!!!!!!!" | cowsay  -f "$(ls /usr/share/cowsay/cows | sort -R | head -1)"')
+	os.system('cowsay  -f "$(ls /usr/share/cowsay/cows | sort -R | head -1)" "abort!!"')
