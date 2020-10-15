@@ -159,9 +159,9 @@ while True:
 				print(f'Drawing from x{x[0]} to x{x[1]}.')
 				brick.sety(y)
 				brick.pendown()
-				for x in range(x[1]-x[0]):
+				for inc in range(x[1]-x[0]):
 					brick.movex(2)
-				for x in range(x[1]-x[0]):
+				for inc in range(x[1]-x[0]):
 					brick.movex(-2)
 				brick.penup()
 	brick.movex(2)
