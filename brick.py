@@ -1,10 +1,12 @@
 from pylgbst.hub import MoveHub, Voltage, VisionSensor
 from pylgbst import get_connection_gatt
 
-brick = 0
+color = 0
 
 def callback(clr,distance):
-    print("Color: %s" % (clr))
+	global color
+	color = clr
+	return True
 
 
 conn = get_connection_gatt(hub_mac="00:16:53:A6:60:CC")
