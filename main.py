@@ -157,10 +157,11 @@ while True:
 		for x in sides[y]:
 			if x[0] == xcount:
 				print(f'Drawing from x{x[0]} to x{x[1]}.')
-
 				brick.sety(y)
 				brick.pendown()
-				brick.setx(x[1]*2)
-				brick.setx(x[0])
+				for x in range(x[1]-x[0]):
+					brick.movex(2)
+				for x in range(x[1]-x[0]):
+					brick.movex(-2)
 				brick.penup()
 	brick.movex(2)
