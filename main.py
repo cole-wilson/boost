@@ -182,13 +182,15 @@ while True:
 		if line2:
 			brick.sety(10)
 			brick.setx(0)
-			birck.x = 0
+			brick.x = 0
+			line2 = False
 			os.system('figlet "FEED ME PAPER!!!!!!!!!!!!!!!!!!!"')
 			input('[press enter to continue]')
 		else:
 			brick.setx(0)
 			brick.sety(100)
 			brick.x = 0
+			line2 = True
 
 brick.penup()
 
