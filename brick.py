@@ -27,16 +27,8 @@ def setx(amount):
 	movex(amount-x)
 def movey(amount):
 	global y
-	hub.motor_external.angled(-1*amount,1)
+	hub.motor_external.angled(1*amount,1)
 	y = y + amount
 def sety(amount):
 	global y
 	movey(amount-y)
-
-movex(100)
-setx(0)
-movey(50)
-movey(0)
-sety(0)
-penup()
-pendown()

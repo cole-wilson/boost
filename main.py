@@ -134,3 +134,19 @@ print('---')
 print(sides)
 print('---')
 print(ups)
+
+
+
+import brick
+
+xcount = 0
+while True:
+	brick.sety(-2)
+	brick.penup()
+	for x in sides[xcount]:
+		print(f'Drawing from y{x[0]} to y{x[1]}.')
+		brick.sety(x[0])
+		brick.pendown()
+		brick.sety(x[1])
+		brick.penup()
+	brick.movex(2)
