@@ -153,6 +153,7 @@ while True:
 		brick.pendown()
 		brick.sety(x[1])
 		brick.penup()
+		brick.hub.motor_A.angled(5,0.2)
 	for y in range(10):
 		for x in sides[y]:
 			if x[0] == xcount:
