@@ -155,7 +155,7 @@ while True:
 	print(f'Scanning for up and down lines at x position {xcount}')
 	try:
 		test = ups[xcount]
-	else:
+	except:
 		break
 	for x in ups[xcount]:
 		print(f'Drawing from y{x[0]} to y{x[1]}.')
