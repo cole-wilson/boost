@@ -158,7 +158,7 @@ while True:
 			if x[0] == brick.x:
 				brick.sety(y)
 				brick.pendown()
-				brick.setx(x[1])
+				brick.setx(x[1]*2)
 				brick.setx(x[0])
 				brick.penup()
 	brick.movex(2)
