@@ -142,7 +142,7 @@ print('Startings')
 xcount = -1
 while True:
 	print('________________________')
-	print('| Battery Voltage: '+str(int(brick.hub.voltage.get_sensor_data(brick.Voltage.VOLTAGE_L)[0])*100)+"% |")
+	print('| Battery Voltage: '+str(int(brick.hub.voltage.get_sensor_data(brick.Voltage.VOLTAGE_L)[0])*10)+"% |")
 	print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
 	xcount = xcount + 1
 	# print('Resetting...')
@@ -150,6 +150,10 @@ while True:
 	print('Pen up')
 	brick.penup()
 	print(f'Scanning for up and down lines at x position {xcount}')
+	try:
+		test = ups[xcount]
+	else:
+		break
 	for x in ups[xcount]:
 		print(f'Drawing from y{x[0]} to y{x[1]}.')
 		brick.sety(x[0])
@@ -171,5 +175,10 @@ while True:
 				brick.penup()
 				# brick.hub.motor_A.angled(5,0.2)
 	brick.movex(2)
+	if brick.x > 200:
+		brick.setx(0)
+		brick.sety(100)
 
 brick.penup()
+
+system('figlet "All done!!"')
