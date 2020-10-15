@@ -153,7 +153,7 @@ while True:
 		brick.pendown()
 		brick.sety(x[1])
 		brick.penup()
-	for y in range(9):
+	for y in range(10):
 		brick.sety(y)
 		for x in sides[y]:
 			if x[0] == brick.x:
