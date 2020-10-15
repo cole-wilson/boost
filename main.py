@@ -143,7 +143,7 @@ xcount = -1
 while True:
 	xcount = xcount + 1
 	print('Resetting...')
-	brick.sety(-2)
+	brick.sety(0)
 	print('Pen up')
 	brick.penup()
 	print(f'Scanning for up and down lines at x position {xcount}')
@@ -153,4 +153,12 @@ while True:
 		brick.pendown()
 		brick.sety(x[1])
 		brick.penup()
+	for y in range(9):
+		brick.sety(y)
+		for x in sides[y]:
+			if x[0] == brick.x:
+				brick.pendown()
+				brick.setx(x[1])
+				brick.setx(x[0])
+				brick.penup()
 	brick.movex(2)
