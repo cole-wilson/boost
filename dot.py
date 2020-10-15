@@ -90,10 +90,10 @@ for x in c:
 	for y in x:
 		count = count + 1
 		if y == '@':
-			if lasty != y and lasty+1 != y and lasty-1 != y:
+			if lasty != count and lasty+1 != count and lasty-1 != count:
 					brick.penup()
 			else:
-				lasty = y
+				lasty = count
 				print('movingy')
 			brick.sety(count)
 			brick.pendown()
