@@ -26,7 +26,7 @@ def pretty(d, indent=0):
 # print(ranges([1,2,3,4,6,7,8,9,10]))
 rows, columns = os.popen('stty size', 'r').read().split()
 size = '8x10'
-message = input(">>>")
+message = input(">>>").replace('. ','.')
 
 letterheight = int(size.split('x')[1])
 spaceamount = 2
@@ -142,8 +142,8 @@ print('Startings')
 xcount = -1
 while True:
 	xcount = xcount + 1
-	print('Resetting...')
-	brick.sety(0)
+	# print('Resetting...')
+	# brick.sety(0)
 	print('Pen up')
 	brick.penup()
 	print(f'Scanning for up and down lines at x position {xcount}')
