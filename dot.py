@@ -84,12 +84,16 @@ c = c2
 
 import brick
 
+lasty = 0
 for x in c:
 	count = 0
 	for y in x:
 		count = count + 1
 		if y == '@':
+			if lasty != y and lasty+1 != y and lasty-1 != y:
+					brick.penup()
+			else:
+				lasty = y
 			brick.sety(count)
 			brick.pendown()
-			brick.penup()
 	brick.movex(2)
