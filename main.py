@@ -42,6 +42,15 @@ for x in range(0,letterheight):
 			letter = 'space'
 		elif letter == '.':
 			letter = 'period'
+		elif letter == ',':
+			letter = 'comma'
+		elif letter == '?':
+			letter = 'question'
+		elif letter == '!':
+			letter = 'exclamation'
+		elif letter == "'":
+			letter = 'apostrophe'
+		
 		thisline = thisline + open('letters/'+size+'/'+letter).read().split('\n')[x]+(' _'*spaceamount)+(' ' if spaceamount != 0 else ' ')
 	added.append(thisline)
 
