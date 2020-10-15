@@ -142,7 +142,7 @@ print('Startings')
 xcount = -1
 while True:
 	print('________________________')
-	print('| Battery Voltage: '+str(brick.hub.voltage.get_sensor_data(brick.Voltage.VOLTAGE_L)*100)+"% |")
+	print('| Battery Voltage: '+str(int(brick.hub.voltage.get_sensor_data(brick.Voltage.VOLTAGE_L))*100)+"% |")
 	print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
 	xcount = xcount + 1
 	# print('Resetting...')
@@ -156,7 +156,7 @@ while True:
 		brick.pendown()
 		brick.sety(x[1])
 		brick.penup()
-		brick.hub.motor_A.angled(5,0.2)
+		# brick.hub.motor_A.angled(5,0.2)
 	for y in range(10):
 		for x in sides[y]:
 			if x[0] == xcount:
@@ -169,7 +169,7 @@ while True:
 				for inc in range(x[1]-x[0]):
 					brick.movex(-2)
 				brick.penup()
-				brick.hub.motor_A.angled(5,0.2)
+				# brick.hub.motor_A.angled(5,0.2)
 	brick.movex(2)
 
 brick.penup()
