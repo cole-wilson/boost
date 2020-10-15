@@ -187,7 +187,7 @@ while True:
 				brick.penup()
 				# brick.hub.motor_A.angled(5,0.2)
 	brick.movex(2)
-	if brick.color != 10 and brick.color != 0 or brick.x > 150:
+	if brick.color != 10 and brick.color != 0 or brick.x > 175:
 		if line2:
 			brick.sety(10)
 			brick.setx(0)
