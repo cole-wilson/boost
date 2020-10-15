@@ -142,7 +142,7 @@ print('Startings')
 xcount = -1
 while True:
 	print('________________________')
-	print('| Battery Voltage: '+str(int(brick.hub.voltage.get_sensor_data(brick.Voltage.VOLTAGE_L))*100)+"% |")
+	print('| Battery Voltage: '+str(int(brick.hub.voltage.get_sensor_data(brick.Voltage.VOLTAGE_L)[0])*100)+"% |")
 	print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
 	xcount = xcount + 1
 	# print('Resetting...')
