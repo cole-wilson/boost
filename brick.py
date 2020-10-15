@@ -7,7 +7,7 @@ hub = MoveHub(conn)
 p = 0
 y = 0
 x = 0
-mult=int(input('amount'))
+mult=float(input('amount'))
 def penup():
 	global p
 	if p!=0:
