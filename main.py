@@ -152,56 +152,60 @@ xcount = -1
 
 line2 = False
 
-while True:
-	print('________________________')
-	print('| Battery Voltage: '+str(int(brick.hub.voltage.get_sensor_data(brick.Voltage.VOLTAGE_L)[0])*10)+"% |")
-	print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
-	xcount = xcount + 1
-	# print('Resetting...')
-	# brick.sety(0)
-	print('Pen up')
-	brick.penup()
-	print(f'Scanning for up and down lines at x position {xcount}')
-	try:
-		test = ups[xcount]
-	except:
-		break
-	for x in ups[xcount]:
-		print(f'Drawing from y{x[0]} to y{x[1]}.')
-		brick.sety(x[0])
-		brick.pendown()
-		brick.sety(x[1])
+try:
+	while True:
+		print('________________________')
+		print('| Battery Voltage: '+str(int(brick.hub.voltage.get_sensor_data(brick.Voltage.VOLTAGE_L)[0])*10)+"% |")
+		print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+		xcount = xcount + 1
+		# print('Resetting...')
+		# brick.sety(0)
+		print('Pen up')
 		brick.penup()
-		# brick.hub.motor_A.angled(5,0.2)
-	for y in range(10):
-		for x in sides[y]:
-			if x[0] == xcount:
-				print(f'Drawing from x{x[0]} to x{x[1]}.')
-				brick.sety(y)
-				brick.pendown()
-				for inc in range(x[1]-x[0]):
-					brick.movex(10)
-				brick.penup()
-				brick.movex(-10*(x[1]-x[0]))
-				brick.penup()
-				# brick.hub.motor_A.angled(5,0.2)
-	brick.movex(10)
-	if brick.color != 10 and brick.color != 0:
-		if line2:
-			brick.sety(10)
-			brick.setx(0)
-			brick.x = 0
-			line2 = False
-			os.system('figlet "FEED ME PAPER!!!!!!!!!!!!!!!!!!!"')
-			input('[press enter to continue]')
-		else:
-			os.system('figlet "Line 2!!"')
-			brick.setx(0)
-			brick.sety(15)
-			brick.y = 0
-			brick.x = 0
-			line2 = True
+		print(f'Scanning for up and down lines at x position {xcount}')
+		try:
+			test = ups[xcount]
+		except:
+			break
+		for x in ups[xcount]:
+			print(f'Drawing from y{x[0]} to y{x[1]}.')
+			brick.sety(x[0])
+			brick.pendown()
+			brick.sety(x[1])
+			brick.penup()
+			# brick.hub.motor_A.angled(5,0.2)
+		for y in range(10):
+			for x in sides[y]:
+				if x[0] == xcount:
+					print(f'Drawing from x{x[0]} to x{x[1]}.')
+					brick.sety(y)
+					brick.pendown()
+					for inc in range(x[1]-x[0]):
+						brick.movex(10)
+					brick.penup()
+					brick.movex(-10*(x[1]-x[0]))
+					brick.penup()
+					# brick.hub.motor_A.angled(5,0.2)
+		brick.movex(10)
+		if brick.color != 10 and brick.color != 0:
+			if line2:
+				brick.sety(10)
+				brick.setx(0)
+				brick.x = 0
+				line2 = False
+				os.system('figlet "FEED ME PAPER!!!!!!!!!!!!!!!!!!!"')
+				input('[press enter to continue]')
+			else:
+				os.system('figlet "Line 2!!"')
+				brick.setx(0)
+				brick.sety(15)
+				brick.y = 0
+				brick.x = 0
+				line2 = True
 
-brick.penup()
+	brick.penup()
 
-os.system('figlet "All done!!"')
+	os.system('figlet "All done!!"')
+except:
+	brick.penup()
+	os.system('figlet "ABORT!!!!!!!!!!!" | cowsay  -f "$(ls /usr/share/cowsay/cows | sort -R | head -1)"')
