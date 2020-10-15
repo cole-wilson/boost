@@ -183,7 +183,7 @@ try:
 					for inc in range(x[1]-x[0]):
 						brick.movex(10)
 					brick.penup()
-					brick.movex(-10*(x[1]-x[0])+1)
+					brick.movex(-10*(x[1]-x[0]))
 					brick.penup()
 					# brick.hub.motor_A.angled(5,0.2)
 		brick.movex(10)
@@ -204,7 +204,8 @@ try:
 				line2 = True
 
 	brick.penup()
-
+	brick.sety(0)
+	brick.hub.motor_B.angled(4000,1)
 	os.system('figlet "All done!!"')
 except:
 	brick.penup()
