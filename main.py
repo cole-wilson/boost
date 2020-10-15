@@ -138,11 +138,13 @@ print(ups)
 # PRINT
 
 import brick
-
+print('Startings')
 xcount = -1
 while True:
 	xcount = xcount + 1
+	print('Resetting...')
 	brick.sety(-2)
+	print('Pen up')
 	brick.penup()
 	print(f'Scanning for up and down lines at x position {xcount}')
 	for x in ups[xcount]:
