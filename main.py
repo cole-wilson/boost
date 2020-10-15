@@ -183,7 +183,7 @@ try:
 					for inc in range(x[1]-x[0]):
 						brick.movex(10)
 					brick.penup()
-					brick.movex(-10*(x[1]-x[0]))
+					brick.movex(-10*(x[1]-x[0])+1)
 					brick.penup()
 					# brick.hub.motor_A.angled(5,0.2)
 		brick.movex(10)
