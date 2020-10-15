@@ -139,11 +139,12 @@ print(ups)
 
 import brick
 
-xcount = 0
+xcount = 1
 while True:
 	brick.sety(-2)
 	brick.penup()
 	for x in sides[xcount]:
+		xcount = xcount + 1
 		print(f'Drawing from y{x[0]} to y{x[1]}.')
 		brick.sety(x[0])
 		brick.pendown()
