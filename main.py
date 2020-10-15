@@ -157,6 +157,7 @@ while True:
 		for x in sides[y]:
 			if x[0] == brick.x:
 				print(f'Drawing from y{x[0]} to y{x[1]}.')
+				
 				brick.sety(y)
 				brick.pendown()
 				brick.setx(x[1]*2)
