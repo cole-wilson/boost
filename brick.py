@@ -1,4 +1,4 @@
-from pylgbst.hub import MoveHub
+from pylgbst.hub import MoveHub, Voltage
 from pylgbst import get_connection_gatt
 
 conn = get_connection_gatt(hub_mac="00:16:53:A6:60:CC")
