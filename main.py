@@ -154,9 +154,9 @@ while True:
 		brick.sety(x[1])
 		brick.penup()
 	for y in range(10):
-		brick.sety(y)
 		for x in sides[y]:
 			if x[0] == brick.x:
+				brick.sety(y)
 				brick.pendown()
 				brick.setx(x[1])
 				brick.setx(x[0])
