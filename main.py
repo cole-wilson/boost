@@ -181,12 +181,12 @@ try:
 					brick.sety(y)
 					brick.pendown()
 					for inc in range(x[1]-x[0]):
-						brick.movex(14)
+						brick.movex(10)
 					brick.penup()
-					brick.movex(-14*(x[1]-x[0])+1)
+					brick.movex(-10*(x[1]-x[0])+1)
 					brick.penup()
 					# brick.hub.motor_A.angled(5,0.2)
-		brick.movex(14)
+		brick.movex(10)
 		if brick.color != 10 and brick.color != 0:
 			if line2:
 				brick.sety(10)
