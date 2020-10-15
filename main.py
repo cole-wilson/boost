@@ -180,13 +180,13 @@ while True:
 				brick.sety(y)
 				brick.pendown()
 				for inc in range(x[1]-x[0]):
-					brick.movex(2)
+					brick.movex(10)
 				brick.penup()
 				for inc in range(x[1]-x[0]):
-					brick.movex(-2)
+					brick.movex(-10)
 				brick.penup()
 				# brick.hub.motor_A.angled(5,0.2)
-	brick.movex(2)
+	brick.movex(10)
 	if brick.color != 10 and brick.color != 0 or brick.x > 175:
 		if line2:
 			brick.sety(10)
