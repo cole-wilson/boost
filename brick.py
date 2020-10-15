@@ -23,17 +23,17 @@ mult=float(input('amount'))
 def penup():
 	global p
 	if p!=0:
-		hub.motor_A.angled(40,0.2)
+		hub.motor_A.angled(40,0.8)
 		p = 0
 def pendown():
 	global p
 	if p!=1:
-		hub.motor_A.angled(-40,0.2)
+		hub.motor_A.angled(-40,0.8)
 		p = 1
 def movex(amount):
 	global x
 	global mult
-	hub.motor_B.angled((4*mult)*amount,0.2)
+	hub.motor_B.angled((4*mult)*amount,0.8)
 	x = x + amount
 def setx(amount):
 	global x
@@ -41,7 +41,7 @@ def setx(amount):
 def movey(amount):
 	global y
 	global mult
-	hub.motor_external.angled((24*mult)*amount,0.2)
+	hub.motor_external.angled((24*mult)*amount,0.8)
 	y = y + amount
 def sety(amount):
 	global y
