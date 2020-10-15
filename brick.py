@@ -7,7 +7,7 @@ hub = MoveHub(conn)
 p = 0
 y = 0
 x = 0
-
+mult=int(input('amount'))
 def penup():
 	global p
 	if p!=0:
@@ -20,14 +20,16 @@ def pendown():
 		p = 1
 def movex(amount):
 	global x
-	hub.motor_B.angled(4*amount,0.2)
+	global mult
+	hub.motor_B.angled((4*mult)*amount,0.2)
 	x = x + amount
 def setx(amount):
 	global x
 	movex(amount-x)
 def movey(amount):
 	global y
-	hub.motor_external.angled(24*amount,0.2)
+	global mult
+	hub.motor_external.angled((24*mult)*amount,0.2)
 	y = y + amount
 def sety(amount):
 	global y
