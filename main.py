@@ -26,7 +26,8 @@ def pretty(d, indent=0):
 # print(ranges([1,2,3,4,6,7,8,9,10]))
 rows, columns = os.popen('stty size', 'r').read().split()
 size = '8x10'
-message = input(">>>").replace('. ','.')
+# message = input(">>>").replace('. ','.')
+message = open('i').read().replace('. ','.')
 
 letterheight = int(size.split('x')[1])
 spaceamount = 2
