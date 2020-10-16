@@ -50,7 +50,6 @@ for x in range(0,letterheight):
 			letter = 'exclamation'
 		elif letter == "'":
 			letter = 'apostrophe'
-		
 		thisline = thisline + open('letters/'+size+'/'+letter).read().split('\n')[x]+(' _'*spaceamount)+(' ' if spaceamount != 0 else ' ')
 	added.append(thisline)
 
