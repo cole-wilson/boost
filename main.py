@@ -149,7 +149,7 @@ import brick
 print('Startings')
 xcount = -1
 
-line2 = False
+line = 1
 
 try:
 	while True:
@@ -187,20 +187,28 @@ try:
 					# brick.hub.motor_A.angled(5,0.2)
 		brick.movex(10)
 		if brick.color != 10 and brick.color != 0:
-			if line2:
+			if line == 3:
 				brick.sety(10)
 				brick.setx(0)
 				brick.x = 0
-				line2 = False
+				line = 1
 				os.system('figlet "FEED ME PAPER!!!!!!!!!!!!!!!!!!!"')
 				input('[press enter to continue]')
-			else:
+			elif line == 2:
+				os.system('figlet "Line 3!!"')
+				brick.setx(0)
+				brick.sety(15)
+				brick.y = 0
+				brick.x = 0
+				line = 3
+			elif line == 1:
 				os.system('figlet "Line 2!!"')
 				brick.setx(0)
 				brick.sety(15)
 				brick.y = 0
 				brick.x = 0
-				line2 = True
+				line = 2
+				
 
 	brick.penup()
 	brick.sety(0)

@@ -19,7 +19,7 @@ hub.vision_sensor.subscribe(callback, mode=VisionSensor.COLOR_DISTANCE_FLOAT)
 p = 0
 y = 0
 x = 0
-mult=float(input('amount'))
+mult=0.6
 def penup():
 	global p
 	if p!=0:
